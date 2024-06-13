@@ -157,4 +157,16 @@ async function videoMetrics(vid) {
         });
 
     }
+
+    chrome.runtime.onMessage.addListener(recievedMessage);
+
+    function recievedMessage(message, sender, sendResponse){
+        console.log('content recieved message: ', message)
+        if (message) {
+            overlay.style.display = 'block';
+        } else {
+            overlay.style.display = 'none';
+        }
+    }
+
 }
