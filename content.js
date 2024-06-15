@@ -126,6 +126,8 @@ async function videoMetrics(vid) {
             document.getElementById("drmProtected").innerHTML = drmProtected;
             document.getElementById("drmSupport").innerHTML = drmSupport;
         });
+
+        overlay.style.display = 'none'; // defaults to hidden
     }
 
     // Style the overlay using CSS
